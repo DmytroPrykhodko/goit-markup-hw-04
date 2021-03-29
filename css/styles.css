@@ -383,7 +383,7 @@ img {
 .clients-list {
   display: flex;
 }
-.clients-item {
+.clients-link-item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -400,17 +400,15 @@ img {
   margin-right: 30px;
 }
 
-.clients-item:hover,
-.clients-item:focus {
-  cursor: pointer;
-  background-color: var(--white-bg-color);
-  border-color: var(--third-bg-color);
+.clients-link-item:hover .logo-icon,
+.clients-link-item:focus .logo-icon {
+  fill: var(--third-bg-color);
 }
 
-.clients-item:hover .logo-icon,
-.clients-item:focus .logo-icon {
-  cursor: pointer;
-  fill: var(--third-bg-color);
+.clients-link-item:hover,
+.clients-link-item:focus {
+  border: 1px solid var(--third-bg-color);
+  outline: none;
 }
 
 .footer {
@@ -499,7 +497,13 @@ img {
   background-color: var(--second-bg-color);
 
   padding: 6px 22px 6px 22px;
+  border: none;
   border-radius: 4px;
+  outline: none;
+}
+
+.filter-item {
+  outline: none;
 }
 
 .filter-item:not(:last-child) {
@@ -516,11 +520,20 @@ img {
   cursor: pointer;
 }
 
+.button-filter:hover,
+.button-filter:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 button:focus,
-button:hover,
-.portfolio:hover,
-.portfolio:focus {
+button:hover {
   background-color: var(--third-bg-color);
+}
+
+.portfolio:hover,
+.portfolio:focus,
+.portfolio-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .filter {
@@ -546,6 +559,8 @@ a {
   margin-right: 30px;
   margin-bottom: 30px;
   flex-basis: calc((100% - 90px) / 3);
+  border: 1px solid #eeeeee;
+  background: #ffffff;
 }
 
 .portfolio:nth-child(3n) {
