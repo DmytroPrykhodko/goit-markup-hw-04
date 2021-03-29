@@ -420,7 +420,6 @@ img {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  margin-block-end: auto;
   margin-bottom: 20px;
   color: var(--background-text-color);
 }
@@ -528,6 +527,7 @@ img {
 button:focus,
 button:hover {
   background-color: var(--third-bg-color);
+  color: var(--background-text-color);
 }
 
 .portfolio:hover,
